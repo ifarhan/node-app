@@ -1,0 +1,9 @@
+#!/bin/sh
+
+ssh gitbot@167.71.146.30 <<EOF
+	cd ~/node-app
+	git pull
+	npm install --production
+	pm2 restart all
+	exit
+EOF
